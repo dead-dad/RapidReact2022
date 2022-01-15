@@ -7,7 +7,7 @@ public class ShooterController {
 
 	Shooter shooter;
 
-	Conveyor conveyor;
+	//Conveyor conveyor;
 
 	Limelight limelight;
 
@@ -38,11 +38,11 @@ public class ShooterController {
 	double FF = 1;
 	int Izone = 25;
 
-	public ShooterController(Conveyor conveyor, Shooter shooter, Limelight limelight, Drive drive) {
+	public ShooterController(Shooter shooter, Limelight limelight, Drive drive) {
 
 		this.shooter = shooter;
 
-		this.conveyor = conveyor;
+		//this.conveyor = conveyor;
 
 		this.limelight = limelight;
 
@@ -59,7 +59,7 @@ public class ShooterController {
 
 		shooter.stop();
 
-		conveyor.setSpeed(0);
+		//conveyor.setSpeed(0);
 
 		shooter.eval(0);
 
@@ -85,7 +85,7 @@ public class ShooterController {
 
 		eval();
 
-		conveyor.setConveyor(Shooter.readyToFire);
+		//conveyor.setConveyor(Shooter.readyToFire);
 
 		shooter.setFeeders(Shooter.readyToFire);
 
@@ -99,7 +99,7 @@ public class ShooterController {
 
 		shooter.setShooterSpeeds(15 * 12);
 
-		conveyor.setConveyor(Shooter.readyToFire);
+		//conveyor.setConveyor(Shooter.readyToFire);
 
 		shooter.setFeeders(Shooter.readyToFire);
 

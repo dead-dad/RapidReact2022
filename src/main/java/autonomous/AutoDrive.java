@@ -5,8 +5,6 @@ import utils.*;
 
 import java.util.ArrayList;
 
-import autonomous.Command.CommandType;
-
 public class AutoDrive {
 
 	PIDMotorGroup leftMotors;
@@ -209,8 +207,6 @@ public class AutoDrive {
 
 			leftMotors.setPosition(Calc.inchesToDrive(completePositions[0]), -leftSpeed, leftSpeed);
 			rightMotors.setPosition(Calc.inchesToDrive(completePositions[1]), -rightSpeed, rightSpeed);
-			//leftMotors.setSpeed(leftSpeed);
-			//rightMotors.setSpeed(-rightSpeed);
 
 		}
 
@@ -248,23 +244,7 @@ public class AutoDrive {
 
 		System.out.println("left error: " + leftError);
 		System.out.println("right error: " + rightError);
-/*
-		if (getQueue().get(0).getType() == Command.CommandType.SPLINE) {
 
-			if (leftError <= acceptableError) {
-
-				leftMotors.setSpeed(0.0);
-
-			}
-
-			if (rightError <= acceptableError) {
-
-				rightMotors.setSpeed(0.0);
-
-			}
-
-		}
-*/
 		if(leftError <= acceptableError && rightError <= acceptableError) {
 			System.out.println("DONE COMMAND");
 			removeCommand(0);
