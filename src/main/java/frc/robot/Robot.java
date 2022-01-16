@@ -23,24 +23,7 @@ public class Robot extends TimedRobot {
 	public void robotPeriodic() {}
 
 	@Override
-	public void autonomousInit() {
-
-		autoPath = new AutoPath("home/lvuser/deploy/autopaths/test.json");
-
-		ArrayList<Command> commands = autoPath.getCommandQueue();
-
-		for (int i = 0; i < commands.size(); i++) {
-
-			System.out.println("type: " + commands.get(i).getType());
-			System.out.println("value: " + commands.get(i).getValue());
-			System.out.println("speed: " + commands.get(i).getSpeed());
-			System.out.println("chordLength: " + commands.get(i).getChordLength());
-			System.out.println("arcLength: " + commands.get(i).getArcHeight() + "\n\n");
-			System.out.println("\n");
-
-		}
-
-	} 
+	public void autonomousInit() {} 
 
 	@Override
 	public void autonomousPeriodic() {}
