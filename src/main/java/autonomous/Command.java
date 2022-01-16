@@ -25,7 +25,7 @@ public class Command {
     public Command(CommandType type, double value, double speed) {
 
         this.type = type;
-        this.value = ((type == CommandType.ROTATE) ? Calc.robotRotationsToDrive(value) : Calc.inchesToDrive(value)); 
+        this.value = ((type == CommandType.ROTATE) ? Calc.robotRotationsToDrive(value) : Calc.inchesToDrive(value));
         this.speed = speed;
         chordLength = 0.0;
         arcHeight = 0.0;
